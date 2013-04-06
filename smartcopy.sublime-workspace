@@ -1,0 +1,395 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "imageinfo/readme.txt",
+			"settings":
+			{
+				"buffer_size": 370,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "manifest.json",
+			"settings":
+			{
+				"buffer_size": 487,
+				"line_ending": "Unix",
+				"name": "{"
+			}
+		},
+		{
+			"contents": "/** Returns a handler which will copy the image data to clipboard */\nfunction getClickHandler() {\n  return function(info, tab) {\n    var html =  \"<blockquote cite='\" + info.pageUrl + \"'>\";\n    if (info.srcUrl) { // IMAGE\n      // TODO: downscale image if it is wider than 500px\n      title = tab.title ? tab.title : info.pageUrl\n      favicon = tab.favIconUrl ? \"<img style='margin-bottom:-2px;' src='\" + tab.favIconUrl + \"'> \": \"\"\n      html += \"<figure><img src='\" + info.srcUrl + \"' alt='\" + info.srcUrl + \"'>\" +\n                  \"<figcaption>\" +\n                    \"<p style='color:#999;'><small>—  \" + favicon + \"<a href='\" + info.pageUrl + \"'>\" + title + \"</a></small></p>\" +\n                  \"</figcaption>\" +\n                \"</figure>\";\n\n    } else { // TEXT\n      html += \"<p>\" + tab + \"</p>\" +\n              \"<small>—  \" + favicon + \"<a href='\" + info.pageUrl + \"'>\" + title + \"</a></small>\";\n    }\n    html += \"</blockquote>\"\n    html = html.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')\n\n//    alert\n\n    var copyDiv = document.createElement('div');\n    copyDiv.contentEditable = true;\n    document.body.appendChild(copyDiv);\n    copyDiv.innerHTML = html;\n    copyDiv.unselectable = \"off\";\n    copyDiv.focus();\n    document.execCommand('SelectAll');\n    document.execCommand('Copy', false, null);\n    document.body.removeChild(copyDiv);\n  };\n};\n\n/** Create a context menu which will only show up for images. */\nchrome.contextMenus.create({\n  \"title\" : \"Smart copy image\",\n  \"type\" : \"normal\",\n  \"contexts\" : [\"image\",\"selection\"],\n  \"onclick\" : getClickHandler()\n});\n",
+			"file": "background.js",
+			"file_size": 1604,
+			"file_write_time": 1365175330000000,
+			"settings":
+			{
+				"buffer_size": 1601,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/q.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "info.html",
+			"settings":
+			{
+				"buffer_size": 2449,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "info.js",
+			"settings":
+			{
+				"buffer_size": 4045,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 309.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 516.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/layouts/application.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/_head.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/_header.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/_menu.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/_menu_branch.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/assets/stylesheets/application.css.scss",
+		"/home/am/ForkForge/Mine/meme-me.ru/config/initializers/refinery/blog.rb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/blog/admin/posts/_form_part.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/blog/admin/posts/_form.html.erb",
+		"/tmp/q.html",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/blog/posts/show.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/Gemfile",
+		"/home/am/ForkForge/Mine/meme-me.ru/config/application.rb",
+		"/home/am/ForkForge/Mine/meme-me.ru/config/environment.rb",
+		"/home/am/ForkForge/Mine/meme-me.ru/config/routes.rb",
+		"/home/am/ForkForge/Mine/meme-me.ru/config/initializers/refinery/core.rb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/_content_page.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/pages/home.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/views/refinery/pages/show.html.erb",
+		"/home/am/ForkForge/Mine/meme-me.ru/app/assets/stylesheets/application.css",
+		"/home/am/ForkForge/Mine/meme-me.ru/.gitignore",
+		"/home/am/ForkForge/Mine/meme-me.ru/config.ru",
+		"/home/am/ForkForge/Mine/meme-me.ru/config/environments/development.rb",
+		"/home/am/ForkForge/Mine/meme-me.ru/meme-me.ru.sublime-project",
+		"/home/am/ForkForge/Mine/meme-me.ru/meme-me.ru.sublime-workspace",
+		"/home/am/ForkForge/Mine/mememe/lib/mememe/language/punctuations.rb",
+		"/home/am/ForkForge/Mine/mememe/features/language.feature",
+		"/home/am/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/am/ForkForge/Mine/mememe/features/step_definitions/language_steps.rb",
+		"/home/am/ForkForge/Mine/mememe/features/support/env.rb",
+		"/home/am/ForkForge/Mine/mememe/lib/mememe/language/language.rb",
+		"/home/am/ForkForge/Mine/mememe/lib/mememe/language/lexem.rb",
+		"/home/am/ForkForge/Mine/mememe/lib/mememe/language/punctuation/en.rb"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"&gt;",
+			"&lt;"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			">",
+			"<"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "imageinfo/readme.txt",
+					"settings":
+					{
+						"buffer_size": 370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "manifest.json",
+					"settings":
+					{
+						"buffer_size": 487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "background.js",
+					"settings":
+					{
+						"buffer_size": 1601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								796,
+								796
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/tmp/q.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "info.html",
+					"settings":
+					{
+						"buffer_size": 2449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1244,
+								1244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "info.js",
+					"settings":
+					{
+						"buffer_size": 4045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1752.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true
+}
