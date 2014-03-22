@@ -8,7 +8,7 @@ function getClickHandler() {
       // TODO: downscale image if it is wider than 500px
       html += "<figure><img src='" + info.srcUrl + "' alt='" + info.srcUrl + "'>¶" +
                 "<figcaption>¶" +
-                  "<p style='color:#999;'><small>—  " + favicon + "<a href='" + info.pageUrl + "'>" + title + "</a></small></p>¶" +
+                  "<p style='color:#999;'><small>  " + favicon + "<a href='" + info.pageUrl + "'>" + title + "</a></small></p>¶" +
                 "</figcaption>¶" +
               "</figure>¶";
 
